@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7A4F9C71B1D6EEA00B84A4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9C61B1D6EEA00B84A4E /* main.m */; };
+		F7A4F9CA1B1D6EEA00B84A4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9C91B1D6EEA00B84A4E /* AppDelegate.m */; };
+		F7A4F9D31B1D6EEA00B84A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A4F9D11B1D6EEA00B84A4E /* Main.storyboard */; };
+		F7A4F9D51B1D6EEA00B84A4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A4F9D41B1D6EEA00B84A4E /* Images.xcassets */; };
+		F7A4F9D81B1D6EEA00B84A4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A4F9D61B1D6EEA00B84A4E /* LaunchScreen.xib */; };
+		F7A4F9E41B1D6EEA00B84A4E /* WGBLETests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9E31B1D6EEA00B84A4E /* WGBLETests.m */; };
+		F7A4F9FD1B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F11B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m */; };
+		F7A4F9FE1B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F11B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m */; };
+		F7A4F9FF1B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F31B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m */; };
+		F7A4FA001B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F31B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m */; };
+		F7A4FA011B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F51B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m */; };
+		F7A4FA021B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F51B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m */; };
+		F7A4FA031B1D6F5A00B84A4E /* WGBLECentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F71B1D6F5A00B84A4E /* WGBLECentralManager.m */; };
+		F7A4FA041B1D6F5A00B84A4E /* WGBLECentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F71B1D6F5A00B84A4E /* WGBLECentralManager.m */; };
+		F7A4FA051B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FA1B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m */; };
+		F7A4FA061B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FA1B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m */; };
+		F7A4FA071B1D6F5A00B84A4E /* WGBLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FC1B1D6F5A00B84A4E /* WGBLEPeripheral.m */; };
+		F7A4FA081B1D6F5A00B84A4E /* WGBLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FC1B1D6F5A00B84A4E /* WGBLEPeripheral.m */; };
+		F7A4FA0B1B1D705D00B84A4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4FA0A1B1D705D00B84A4E /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7A4F9DE1B1D6EEA00B84A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7A4F9B91B1D6EEA00B84A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7A4F9C01B1D6EEA00B84A4E;
+			remoteInfo = WGBLE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7A4F9C11B1D6EEA00B84A4E /* WGBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A4F9C51B1D6EEA00B84A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A4F9C61B1D6EEA00B84A4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7A4F9C81B1D6EEA00B84A4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7A4F9C91B1D6EEA00B84A4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7A4F9D21B1D6EEA00B84A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7A4F9D41B1D6EEA00B84A4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F7A4F9D71B1D6EEA00B84A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F7A4F9DD1B1D6EEA00B84A4E /* WGBLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WGBLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A4F9E21B1D6EEA00B84A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A4F9E31B1D6EEA00B84A4E /* WGBLETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGBLETests.m; sourceTree = "<group>"; };
+		F7A4F9EE1B1D6F5A00B84A4E /* WGBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGBLE.h; sourceTree = "<group>"; };
+		F7A4F9F01B1D6F5A00B84A4E /* WGBLECentralManager+Connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WGBLECentralManager+Connect.h"; sourceTree = "<group>"; };
+		F7A4F9F11B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WGBLECentralManager+Connect.m"; sourceTree = "<group>"; };
+		F7A4F9F21B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WGBLECentralManager+Delegate.h"; sourceTree = "<group>"; };
+		F7A4F9F31B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WGBLECentralManager+Delegate.m"; sourceTree = "<group>"; };
+		F7A4F9F41B1D6F5A00B84A4E /* WGBLECentralManager+Scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WGBLECentralManager+Scan.h"; sourceTree = "<group>"; };
+		F7A4F9F51B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WGBLECentralManager+Scan.m"; sourceTree = "<group>"; };
+		F7A4F9F61B1D6F5A00B84A4E /* WGBLECentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGBLECentralManager.h; sourceTree = "<group>"; };
+		F7A4F9F71B1D6F5A00B84A4E /* WGBLECentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGBLECentralManager.m; sourceTree = "<group>"; };
+		F7A4F9F91B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WGBLEPeripheral+Discover.h"; sourceTree = "<group>"; };
+		F7A4F9FA1B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WGBLEPeripheral+Discover.m"; sourceTree = "<group>"; };
+		F7A4F9FB1B1D6F5A00B84A4E /* WGBLEPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGBLEPeripheral.h; sourceTree = "<group>"; };
+		F7A4F9FC1B1D6F5A00B84A4E /* WGBLEPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGBLEPeripheral.m; sourceTree = "<group>"; };
+		F7A4FA091B1D705D00B84A4E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7A4FA0A1B1D705D00B84A4E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7A4F9BE1B1D6EEA00B84A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A4F9DA1B1D6EEA00B84A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7A4F9B81B1D6EEA00B84A4E = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9ED1B1D6F5A00B84A4E /* WGBLE */,
+				F7A4F9C31B1D6EEA00B84A4E /* DEMO */,
+				F7A4F9E01B1D6EEA00B84A4E /* WGBLETests */,
+				F7A4F9C21B1D6EEA00B84A4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7A4F9C21B1D6EEA00B84A4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9C11B1D6EEA00B84A4E /* WGBLE.app */,
+				F7A4F9DD1B1D6EEA00B84A4E /* WGBLETests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7A4F9C31B1D6EEA00B84A4E /* DEMO */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9C81B1D6EEA00B84A4E /* AppDelegate.h */,
+				F7A4F9C91B1D6EEA00B84A4E /* AppDelegate.m */,
+				F7A4FA091B1D705D00B84A4E /* ViewController.h */,
+				F7A4FA0A1B1D705D00B84A4E /* ViewController.m */,
+				F7A4F9D11B1D6EEA00B84A4E /* Main.storyboard */,
+				F7A4F9D41B1D6EEA00B84A4E /* Images.xcassets */,
+				F7A4F9D61B1D6EEA00B84A4E /* LaunchScreen.xib */,
+				F7A4F9C41B1D6EEA00B84A4E /* Supporting Files */,
+			);
+			name = DEMO;
+			path = WGBLE;
+			sourceTree = "<group>";
+		};
+		F7A4F9C41B1D6EEA00B84A4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9C51B1D6EEA00B84A4E /* Info.plist */,
+				F7A4F9C61B1D6EEA00B84A4E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7A4F9E01B1D6EEA00B84A4E /* WGBLETests */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9E31B1D6EEA00B84A4E /* WGBLETests.m */,
+				F7A4F9E11B1D6EEA00B84A4E /* Supporting Files */,
+			);
+			path = WGBLETests;
+			sourceTree = "<group>";
+		};
+		F7A4F9E11B1D6EEA00B84A4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9E21B1D6EEA00B84A4E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7A4F9ED1B1D6F5A00B84A4E /* WGBLE */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9EE1B1D6F5A00B84A4E /* WGBLE.h */,
+				F7A4F9EF1B1D6F5A00B84A4E /* WGBLECentralManager */,
+				F7A4F9F81B1D6F5A00B84A4E /* WGBLEPeripheral */,
+			);
+			name = WGBLE;
+			path = ../WGBLE;
+			sourceTree = "<group>";
+		};
+		F7A4F9EF1B1D6F5A00B84A4E /* WGBLECentralManager */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9F01B1D6F5A00B84A4E /* WGBLECentralManager+Connect.h */,
+				F7A4F9F11B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m */,
+				F7A4F9F21B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.h */,
+				F7A4F9F31B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m */,
+				F7A4F9F41B1D6F5A00B84A4E /* WGBLECentralManager+Scan.h */,
+				F7A4F9F51B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m */,
+				F7A4F9F61B1D6F5A00B84A4E /* WGBLECentralManager.h */,
+				F7A4F9F71B1D6F5A00B84A4E /* WGBLECentralManager.m */,
+			);
+			path = WGBLECentralManager;
+			sourceTree = "<group>";
+		};
+		F7A4F9F81B1D6F5A00B84A4E /* WGBLEPeripheral */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4F9F91B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.h */,
+				F7A4F9FA1B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m */,
+				F7A4F9FB1B1D6F5A00B84A4E /* WGBLEPeripheral.h */,
+				F7A4F9FC1B1D6F5A00B84A4E /* WGBLEPeripheral.m */,
+			);
+			path = WGBLEPeripheral;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7A4F9C01B1D6EEA00B84A4E /* WGBLE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A4F9E71B1D6EEA00B84A4E /* Build configuration list for PBXNativeTarget "WGBLE" */;
+			buildPhases = (
+				F7A4F9BD1B1D6EEA00B84A4E /* Sources */,
+				F7A4F9BE1B1D6EEA00B84A4E /* Frameworks */,
+				F7A4F9BF1B1D6EEA00B84A4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WGBLE;
+			productName = WGBLE;
+			productReference = F7A4F9C11B1D6EEA00B84A4E /* WGBLE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7A4F9DC1B1D6EEA00B84A4E /* WGBLETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A4F9EA1B1D6EEA00B84A4E /* Build configuration list for PBXNativeTarget "WGBLETests" */;
+			buildPhases = (
+				F7A4F9D91B1D6EEA00B84A4E /* Sources */,
+				F7A4F9DA1B1D6EEA00B84A4E /* Frameworks */,
+				F7A4F9DB1B1D6EEA00B84A4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7A4F9DF1B1D6EEA00B84A4E /* PBXTargetDependency */,
+			);
+			name = WGBLETests;
+			productName = WGBLETests;
+			productReference = F7A4F9DD1B1D6EEA00B84A4E /* WGBLETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7A4F9B91B1D6EEA00B84A4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = WG;
+				TargetAttributes = {
+					F7A4F9C01B1D6EEA00B84A4E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F7A4F9DC1B1D6EEA00B84A4E = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F7A4F9C01B1D6EEA00B84A4E;
+					};
+				};
+			};
+			buildConfigurationList = F7A4F9BC1B1D6EEA00B84A4E /* Build configuration list for PBXProject "WGBLE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7A4F9B81B1D6EEA00B84A4E;
+			productRefGroup = F7A4F9C21B1D6EEA00B84A4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7A4F9C01B1D6EEA00B84A4E /* WGBLE */,
+				F7A4F9DC1B1D6EEA00B84A4E /* WGBLETests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7A4F9BF1B1D6EEA00B84A4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A4F9D31B1D6EEA00B84A4E /* Main.storyboard in Resources */,
+				F7A4F9D81B1D6EEA00B84A4E /* LaunchScreen.xib in Resources */,
+				F7A4F9D51B1D6EEA00B84A4E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A4F9DB1B1D6EEA00B84A4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7A4F9BD1B1D6EEA00B84A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A4FA0B1B1D705D00B84A4E /* ViewController.m in Sources */,
+				F7A4F9FF1B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m in Sources */,
+				F7A4FA011B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m in Sources */,
+				F7A4F9FD1B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m in Sources */,
+				F7A4FA051B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m in Sources */,
+				F7A4F9CA1B1D6EEA00B84A4E /* AppDelegate.m in Sources */,
+				F7A4FA031B1D6F5A00B84A4E /* WGBLECentralManager.m in Sources */,
+				F7A4F9C71B1D6EEA00B84A4E /* main.m in Sources */,
+				F7A4FA071B1D6F5A00B84A4E /* WGBLEPeripheral.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A4F9D91B1D6EEA00B84A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A4FA001B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m in Sources */,
+				F7A4FA081B1D6F5A00B84A4E /* WGBLEPeripheral.m in Sources */,
+				F7A4FA041B1D6F5A00B84A4E /* WGBLECentralManager.m in Sources */,
+				F7A4F9FE1B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m in Sources */,
+				F7A4FA021B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m in Sources */,
+				F7A4FA061B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m in Sources */,
+				F7A4F9E41B1D6EEA00B84A4E /* WGBLETests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7A4F9DF1B1D6EEA00B84A4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7A4F9C01B1D6EEA00B84A4E /* WGBLE */;
+			targetProxy = F7A4F9DE1B1D6EEA00B84A4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7A4F9D11B1D6EEA00B84A4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A4F9D21B1D6EEA00B84A4E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7A4F9D61B1D6EEA00B84A4E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A4F9D71B1D6EEA00B84A4E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7A4F9E51B1D6EEA00B84A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7A4F9E61B1D6EEA00B84A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7A4F9E81B1D6EEA00B84A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WGBLE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7A4F9E91B1D6EEA00B84A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WGBLE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F7A4F9EB1B1D6EEA00B84A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WGBLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WGBLE.app/WGBLE";
+			};
+			name = Debug;
+		};
+		F7A4F9EC1B1D6EEA00B84A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WGBLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WGBLE.app/WGBLE";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7A4F9BC1B1D6EEA00B84A4E /* Build configuration list for PBXProject "WGBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A4F9E51B1D6EEA00B84A4E /* Debug */,
+				F7A4F9E61B1D6EEA00B84A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A4F9E71B1D6EEA00B84A4E /* Build configuration list for PBXNativeTarget "WGBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A4F9E81B1D6EEA00B84A4E /* Debug */,
+				F7A4F9E91B1D6EEA00B84A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A4F9EA1B1D6EEA00B84A4E /* Build configuration list for PBXNativeTarget "WGBLETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A4F9EB1B1D6EEA00B84A4E /* Debug */,
+				F7A4F9EC1B1D6EEA00B84A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7A4F9B91B1D6EEA00B84A4E /* Project object */;
+}
