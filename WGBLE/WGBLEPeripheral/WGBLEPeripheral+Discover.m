@@ -41,11 +41,16 @@
 }
 - (void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error {
     NSLog(@"%s，方法未集成",__FUNCTION__);
-    
+    if (error) {
+        NSLog(@"%@",error);
+    }
 }
 - (void)peripheral:(CBPeripheral *)peripheral didReadRSSI:(NSNumber *)RSSI error:(NSError *)error {
     NSLog(@"%s，方法未集成",__FUNCTION__);
-    
+    if (error) {
+        NSLog(@"%@",error);
+    }
+
 }
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error{
     NSLog(@"%s",__FUNCTION__);
@@ -76,6 +81,10 @@
 }
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverIncludedServicesForService:(CBService *)service error:(NSError *)error{
     NSLog(@"%s，方法未集成",__FUNCTION__);
+    if (error) {
+        NSLog(@"%@",error);
+    }
+
     
 }
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error{
@@ -125,7 +134,14 @@
 }
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error{
     NSLog(@"%s，方法未集成",__FUNCTION__);
+    if (error) {
+        NSLog(@"%@",error);
+    }
     
+    if (self.onWriteValueForCharacteristic) {
+        self.onWriteValueForCharacteristic(characteristic,error);
+    }
+
 }
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error{
     
@@ -144,15 +160,24 @@
 }
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverDescriptorsForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error{
     NSLog(@"%s，方法未集成",__FUNCTION__);
-    
+    if (error) {
+        NSLog(@"%@",error);
+    }
+
 }
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForDescriptor:(CBDescriptor *)descriptor error:(NSError *)error{
     NSLog(@"%s，方法未集成",__FUNCTION__);
-    
+    if (error) {
+        NSLog(@"%@",error);
+    }
+
 }
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForDescriptor:(CBDescriptor *)descriptor error:(NSError *)error{
     NSLog(@"%s，方法未集成",__FUNCTION__);
-    
+    if (error) {
+        NSLog(@"%@",error);
+    }
+
 }
 
 @end

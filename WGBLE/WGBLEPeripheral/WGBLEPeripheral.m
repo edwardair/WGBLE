@@ -21,10 +21,6 @@
 @end
 @implementation WGBLEPeripheral
 @synthesize discoveringCharacteristicUUIDStrings = _discoveringCharacteristicUUIDStrings;
-#pragma mark - getter
-- (kBLEConnectState )connectState{
-    return (kBLEConnectState )_peripheral.state;
-}
 
 
 #pragma mark -
@@ -139,6 +135,10 @@
 }
 
 #pragma mark - getter
+- (kBLEConnectState )connectState{
+    return (kBLEConnectState )_peripheral.state;
+}
+
 - (NSMutableDictionary *)discoveringCharacteristicUUIDStrings{
     if (!_discoveringCharacteristicUUIDStrings) {
         _discoveringCharacteristicUUIDStrings = @{}.mutableCopy;
@@ -146,7 +146,8 @@
     return _discoveringCharacteristicUUIDStrings;
 }
 
-#pragma mark -
+#pragma mark - selector
+//查找Service
 - (void)discoverServicesWithUUIDStrings:(NSArray *)uuidStrings{
     
     NSMutableArray *tmp = [NSMutableArray arrayWithCapacity:uuidStrings.count];
@@ -159,7 +160,7 @@
     [self setupPeripheralDelegate];
     [_peripheral discoverServices:tmp];
 }
-
+//查找Characteristics
 - (void)discoverCharacteristicsWithUUIDStrings:(NSArray *)uuidStrings WithService:(CBService *)service{
     
     NSMutableArray *tmp = [NSMutableArray arrayWithCapacity:uuidStrings.count];
@@ -170,6 +171,69 @@
     [self.discoveringCharacteristicUUIDStrings setObject:[NSArray arrayWithArray:tmp] forKey:service.UUID.UUIDString];
     
     [_peripheral discoverCharacteristics:tmp forService:service];
+    
+}
+
+//通过UUID获取本地记录的Service
+- (CBService *)serviceWithUUIDString:(NSString *)uuidString{
+    if (self.connectState!=kBLEConnectState_Connected) {
+        return nil;
+    }
+    for (CBService *service in _peripheral.services) {
+        if ([service.UUID.UUIDString isEqualToString:uuidString]) {
+            return service;
+        }
+    }
+    return nil;
+}
+//通过UUID获取本地记录的Characteristic
+- (CBCharacteristic *)characteristicWithUUIDString:(NSString *)uuidString{
+    if (self.connectState!=kBLEConnectState_Connected) {
+        return nil;
+    }
+
+    for (CBService *service in _peripheral.services) {
+        for (CBCharacteristic *characteristic in service.characteristics) {
+            if ([characteristic.UUID.UUIDString isEqualToString:uuidString]) {
+                return characteristic;
+            }
+        }
+    }
+    return nil;
+}
+
+
+#pragma mark - read write
+- (void)readValueForCharacteristicUUIDString:(NSString *)uuidString {
+    [_peripheral
+     readValueForCharacteristic:[self
+                                 characteristicWithUUIDString:uuidString]];
+}
+- (void)write:(NSData *)data
+ForCharacteristicUUIDString:(NSString *)uuidString
+         type:(CBCharacteristicWriteType)type {
+    CBCharacteristic *c = [self characteristicWithUUIDString:uuidString];
+
+#if TEST | REAL_NONE_MI
+    //TODO: 测试环境，直接返回成功
+    if (self.onWriteValueForCharacteristic) {
+        self.onWriteValueForCharacteristic(c,nil);
+    }
+
+#else
+    if (c) {
+        if (c.properties & (CBCharacteristicPropertyWrite |
+                            CBCharacteristicPropertyWriteWithoutResponse)) {
+            [_peripheral writeValue:data forCharacteristic:c type:type];
+        }else{
+            NSLog(@"CBCharacteristic 不支持CBCharacteristicPropertyWrite或者CBCharacteristicPropertyWriteWithoutResponse");
+        }
+        
+    } else {
+        NSLog(@"CBCharacteristic 不存在，无法write");
+    }
+
+#endif
     
 }
 

@@ -2,12 +2,12 @@
 //  WGBLECentralManager+Initializer.m
 //  RmFM
 //
-//  Created by Eduoduo on 15/3/6.
-//  Copyright (c) 2015年 Eduoduo. All rights reserved.
+//  Created by RayMi on 15/3/6.
+//  Copyright (c) 2015年 RayMi. All rights reserved.
 //
 
 #import "WGBLECentralManager+Delegate.h"
-
+#import "WGBLECentralManager+Connect.h"
 
 @implementation WGBLECentralManager (Delegate)
 
@@ -23,6 +23,13 @@
         self->_centralManagerEnable = YES;
     }else{
         self->_centralManagerEnable = NO;
+    }
+    
+    //如果连接无效、获取关闭，将连接中的peripheral断开
+    if (!_centralManagerEnable) {
+        for (WGBLEPeripheral *wgPeripheral in self.connectingPeriperals) {
+            [self disConnect:wgPeripheral];
+        }
     }
     
     if (self.centralManagerOnChangeState) {
@@ -51,24 +58,24 @@ didRetrieveConnectedPeripherals:(NSArray *)peripherals {
 // didDiscoverPeripheral:(CBPeripheral *)peripheral
 //     advertisementData:(NSDictionary *)advertisementData
 //                  RSSI:(NSNumber *)RSSI {
-//    NSLog(@"%s，功能未集成", __FUNCTION__);
+//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
 //}
-
+//
 //- (void)centralManager:(CBCentralManager *)central
 //  didConnectPeripheral:(CBPeripheral *)peripheral {
-//    NSLog(@"%s，功能未集成", __FUNCTION__);
+//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
 //}
-
+//
 //- (void)centralManager:(CBCentralManager *)central
 //didFailToConnectPeripheral:(CBPeripheral *)peripheral
 //                 error:(NSError *)error {
-//    NSLog(@"%s，功能未集成", __FUNCTION__);
+//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
 //}
 //
 //- (void)centralManager:(CBCentralManager *)central
 //didDisconnectPeripheral:(CBPeripheral *)peripheral
 //                 error:(NSError *)error {
-//    NSLog(@"%s，功能未集成", __FUNCTION__);
+//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
 //}
 
 @end

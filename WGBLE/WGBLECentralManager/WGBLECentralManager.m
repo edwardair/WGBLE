@@ -2,8 +2,8 @@
 //  WGBLECentralManager.m
 //  RmFM
 //
-//  Created by Eduoduo on 15/3/6.
-//  Copyright (c) 2015年 Eduoduo. All rights reserved.
+//  Created by RayMi on 15/3/6.
+//  Copyright (c) 2015年 RayMi. All rights reserved.
 //
 
 #import "WGBLECentralManager.h"
@@ -37,7 +37,10 @@ static dispatch_queue_t staticQueue;
 - (id)initWithQueue:(dispatch_queue_t )queue{
     self = [super init];
     if (self) {
-        _centralManager = [[CBCentralManager alloc]initWithDelegate:self queue:queue];
+        _centralManager = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
+        // options:@{
+        //    CBCentralManagerOptionRestoreIdentifierKey:@"MI_FM"
+        //    }
         [self setupCentralManagerDelegate];
     }
     return self;
@@ -57,6 +60,9 @@ static dispatch_queue_t staticQueue;
         _connectingPeriperals = @[].mutableCopy;
     }
     return _connectingPeriperals;
+}
+- (BOOL)centralManagerEnable{
+    return _centralManagerEnable;
 }
 
 #pragma mark - setter

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-//#import "WGDefines.h"
+
 
 static inline NSString *hexadecimalStringWithData(NSData *data) {
     /* Returns hexadecimal string of NSData. Empty string if data is empty.   */
@@ -53,6 +53,7 @@ typedef NS_ENUM(NSInteger, kBLEConnectState){
 typedef void(^DidDiscoverService)(CBService *service);
 typedef void(^DidDiscoverCharacteristic)(CBService *service,CBCharacteristic *characteristic);
 typedef void(^DidUpdateValueForCharacteristic)(CBCharacteristic *characteristic);
+typedef void(^DidWriteValueForCharacteristic)(CBCharacteristic *characteristic,NSError *error);
 
 
 @interface WGBLEPeripheral : NSObject
@@ -63,6 +64,7 @@ typedef void(^DidUpdateValueForCharacteristic)(CBCharacteristic *characteristic)
 @property (nonatomic,copy) DidDiscoverService onDidDiscoverService;
 @property (nonatomic,copy) DidDiscoverCharacteristic onDidDiscoverCharacteristic;
 @property (nonatomic,copy) DidUpdateValueForCharacteristic onUpdateValueForCharacteristic;
+@property (nonatomic,copy) DidWriteValueForCharacteristic onWriteValueForCharacteristic;
 
 /**
  *  @[NSString *]
@@ -142,7 +144,9 @@ typedef void(^DidUpdateValueForCharacteristic)(CBCharacteristic *characteristic)
 /**
  *  读、写操作
  */
-- (void)read;
-- (void)write:(NSData *)data;
+- (void)readValueForCharacteristicUUIDString:(NSString *)uuidString;
+- (void)write:(NSData *)data
+ForCharacteristicUUIDString:(NSString *)uuidString
+         type:(CBCharacteristicWriteType)type;
 
 @end

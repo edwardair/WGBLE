@@ -2,8 +2,8 @@
 //  WGBLECentralManager+Initializer.m
 //  RmFM
 //
-//  Created by Eduoduo on 15/3/6.
-//  Copyright (c) 2015年 Eduoduo. All rights reserved.
+//  Created by RayMi on 15/3/6.
+//  Copyright (c) 2015年 RayMi. All rights reserved.
 //
 
 #import "WGBLECentralManager+Connect.h"
@@ -20,25 +20,33 @@
         return;
     }
     //检测   peripheral为非连接状态，才可连接
-    if (peripheral.connectState==kBLEConnectState_DisConnect) {
-        [self.centralManager connectPeripheral:peripheral.peripheral
-                                       options:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:CBConnectPeripheralOptionNotifyOnDisconnectionKey]];
-        self->_onPeripheralConnectResult = [result copy];
-    }else{
-//        WGLogValue(@"warning : connect not implement,cause peripheral is in connectState = %@",@(peripheral.connectState),nil);
-        result(NO,peripheral,[NSError errorWithDomain:@"ConnectError" code:-1 userInfo:@{@"desc":@"peripheral已连接，不可重复连接"}]);
-
+    if (peripheral.connectState!=kBLEConnectState_DisConnect) {
+        [self disConnect:peripheral];
     }
+//    else{
+////        WGLogValue(@"warning : connect not implement,cause peripheral is in connectState = %@",@(peripheral.connectState),nil);
+//        result(NO,peripheral,[NSError errorWithDomain:@"ConnectError" code:-1 userInfo:@{@"desc":@"peripheral已连接，不可重复连接"}]);
+//
+//    }
+    
+    [self.centralManager connectPeripheral:peripheral.peripheral
+                                   options:@{
+                                             CBConnectPeripheralOptionNotifyOnDisconnectionKey:@YES,
+                                             CBCentralManagerRestoredStatePeripheralsKey:@YES
+                                             }];
+    self->_onPeripheralConnectResult = [result copy];
+
 }
 - (void)disConnect:(WGBLEPeripheral *)peripheral{
-    if (!self.centralManagerEnable) {
-        NSLog(@"ERROR: centralManager powered off or not usefull");
-        return;
-    }
+//    if (!self.centralManagerEnable) {
+//        WGLogError(@"ERROR: centralManager powered off or not usefull");
+//        return;
+//    }
 
     if (peripheral.connectState==kBLEConnectState_Connected ||
         peripheral.connectState==kBLEConnectState_Connecting) {
         [self.centralManager cancelPeripheralConnection:peripheral.peripheral];
+//        [self.connectingPeriperals removeObject:peripheral];
     }else{
         NSLog(@"warning : disConnect not implement,cause peripheral is not in connecting or connected");
     }
@@ -51,9 +59,16 @@
     
     WGBLEPeripheral *wgPeripheral = [self wgPeripheralFromFoundPeripherals:peripheral];
     if (!wgPeripheral) {
-        NSLog(@"error：scan数组中未查找到对应连接成功的peripheral");
+        NSLog(@"error：scan数组中未查找到对应连接成功的peripheral，此处由于断开的是非控制下的peripheral，将忽略、断开peripheral");
+        [self.centralManager cancelPeripheralConnection:peripheral];
+        
     }else if ([self.connectingPeriperals containsObject:wgPeripheral]){
-        NSLog(@"error：连接成功的peripheral已存在，无法重复记录在connectingPeripherals数组中，检查代码是否多次connect:peripheral");
+        NSLog(@"error：连接成功的peripheral已存在，无法重复记录在connectingPeripherals数组中，可能是由于直接断开蓝牙再重连导致的检测不到peripheral的disConnect回调");
+        
+        if (self.onPeripheralConnectResult) {
+            self.onPeripheralConnectResult(YES,wgPeripheral,nil);
+        }
+
     }else{
         //临时存储
         //MARK: DEBUG检测，此成功回调中，获取CBPeripheral.state是否对应
@@ -88,7 +103,7 @@ didDisconnectPeripheral:(CBPeripheral *)peripheral
     //断开连接，将connectingPeripherals中移除对应的WGBLEPeripheral
     WGBLEPeripheral *wgPeripheral = [self wgPeripheralFromConnectedPeripherals:peripheral];
     if (!wgPeripheral) {
-        NSLog(@"warning:将要移除的wgPeripheral不存在，检查程序代码");
+        NSLog(@"warning:将要移除的wgPeripheral不存在,此处由于断开的是非控制下的peripheral，将忽略、不返回断开回调");
     }else{
         //MARK: DEBUG检测，此断开成功回调中，获取CBPeripheral.state是否对应
 #if DEBUG

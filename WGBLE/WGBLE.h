@@ -1,9 +1,9 @@
 //
 //  WGBLE.h
+//  RmFM
 //
-//
-//  Created by Eduoduo on 15/4/9.
-//  Copyright (c) 2015年 Eduoduo. All rights reserved.
+//  Created by RayMi on 15/4/9.
+//  Copyright (c) 2015年 RayMi. All rights reserved.
 //
 
 #ifndef WGBLE_h
