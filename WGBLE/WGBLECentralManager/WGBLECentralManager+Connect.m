@@ -63,7 +63,7 @@
         [self.centralManager cancelPeripheralConnection:peripheral];
         
     }else if ([self.connectingPeriperals containsObject:wgPeripheral]){
-        NSLog(@"error：连接成功的peripheral已存在，无法重复记录在connectingPeripherals数组中，可能是由于直接断开蓝牙再重连导致的检测不到peripheral的disConnect回调");
+        NSLog(@"error：连接成功的peripheral已存在，无法重复记录在connectingPeripherals数组中，可能是由于直接断开蓝牙再重连导致的检测不到peripheral的disConnect回调，但不影响BLE连接");
         
         if (self.onPeripheralConnectResult) {
             self.onPeripheralConnectResult(YES,wgPeripheral,nil);
