@@ -87,8 +87,7 @@ typedef void (^PeripheralDisConnectResult)(BOOL success,WGBLEPeripheral *periphe
  *  @return WGBLECentralManager
  */
 - (id)initWithQueue:(dispatch_queue_t )queue;
-
-
+- (id)initWithQueue:(dispatch_queue_t )queue options:(NSDictionary *)options;
 
 
 #pragma mark - scan

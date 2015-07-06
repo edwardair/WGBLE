@@ -35,12 +35,15 @@ static dispatch_queue_t staticQueue;
     return centralManager;
 }
 - (id)initWithQueue:(dispatch_queue_t )queue{
+    return [self initWithQueue:queue options:nil];
+}
+- (id )initWithQueue:(dispatch_queue_t)queue options:(NSDictionary *)options{
     self = [super init];
     if (self) {
-        _centralManager = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
-        // options:@{
-        //    CBCentralManagerOptionRestoreIdentifierKey:@"MI_FM"
-        //    }
+        _centralManager = [[CBCentralManager alloc] initWithDelegate:self
+                                                               queue:queue
+                                                             options:options];
+
         [self setupCentralManagerDelegate];
     }
     return self;
