@@ -40,9 +40,10 @@
     
 }
 - (void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error {
-    NSLog(@"%s，方法未集成",__FUNCTION__);
     if (error) {
         NSLog(@"%@",error);
+    }else{
+        [peripheral readRSSI];
     }
 }
 - (void)peripheral:(CBPeripheral *)peripheral didReadRSSI:(NSNumber *)RSSI error:(NSError *)error {
