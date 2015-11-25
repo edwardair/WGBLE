@@ -142,6 +142,10 @@ typedef void(^DidWriteValueForCharacteristic)(CBCharacteristic *characteristic,N
 - (void)enteredForeground;
 
 /**
+ *  通过UUID获取对应的characteristic
+ */
+- (CBCharacteristic *)characteristicWithUUIDString:(NSString *)uuidString;
+/**
  *  读、写操作
  */
 - (void)readValueForCharacteristicUUIDString:(NSString *)uuidString;
