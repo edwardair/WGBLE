@@ -227,10 +227,16 @@ ForCharacteristicUUIDString:(NSString *)uuidString
             [_peripheral writeValue:data forCharacteristic:c type:type];
         }else{
             NSLog(@"CBCharacteristic 不支持CBCharacteristicPropertyWrite或者CBCharacteristicPropertyWriteWithoutResponse");
+            if (self.onWriteValueForCharacteristic) {
+                self.onWriteValueForCharacteristic(c,[NSError errorWithDomain:@"WGBLE" code:-1 userInfo:@{NSURLErrorFailingURLErrorKey:@"CBCharacteristicWriteType not support"}]);
+            }
         }
         
     } else {
         NSLog(@"CBCharacteristic 不存在，无法write");
+        if (self.onWriteValueForCharacteristic) {
+            self.onWriteValueForCharacteristic(c,[NSError errorWithDomain:@"WGBLE" code:-1 userInfo:@{NSURLErrorFailingURLErrorKey:@"CBCharacteristic not exist"}]);
+        }
     }
 
 #endif
