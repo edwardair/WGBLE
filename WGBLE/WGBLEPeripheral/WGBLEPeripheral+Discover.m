@@ -134,7 +134,7 @@
     
 }
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error{
-    NSLog(@"%s，方法未集成",__FUNCTION__);
+//    NSLog(@"%s，方法未集成",__FUNCTION__);
     if (error) {
         NSLog(@"%@",error);
     }
