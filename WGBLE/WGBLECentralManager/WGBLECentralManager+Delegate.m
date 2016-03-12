@@ -23,15 +23,13 @@
         self->_centralManagerEnable = YES;
     }else{
         self->_centralManagerEnable = NO;
+        
+        //蓝牙关闭，清空已记录的BLE
+        [self.connectingPeriperals removeAllObjects];
+        [self.foundPeripherals removeAllObjects];
+        
     }
-    
-    //如果连接无效、获取关闭，将连接中的peripheral断开
-    if (!_centralManagerEnable) {
-        for (WGBLEPeripheral *wgPeripheral in self.connectingPeriperals) {
-            [self disConnect:wgPeripheral];
-        }
-    }
-    
+        
     if (self.centralManagerOnChangeState) {
         self.centralManagerOnChangeState(central.state);
     }
