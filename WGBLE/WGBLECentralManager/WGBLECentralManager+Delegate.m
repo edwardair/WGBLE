@@ -8,6 +8,7 @@
 
 #import "WGBLECentralManager+Delegate.h"
 #import "WGBLECentralManager+Connect.h"
+#import "WGBLECentralManager+Scan.h"
 
 @implementation WGBLECentralManager (Delegate)
 
@@ -23,11 +24,7 @@
         self->_centralManagerEnable = YES;
     }else{
         self->_centralManagerEnable = NO;
-        
-        //蓝牙关闭，清空已记录的BLE
-        [self.connectingPeriperals removeAllObjects];
-        [self.foundPeripherals removeAllObjects];
-        
+        [self stopScan];
     }
         
     if (self.centralManagerOnChangeState) {

@@ -49,7 +49,7 @@ UITableViewDataSource,UITableViewDelegate
     
     [WGBLECentralManager sharedCentralManager].onScanNewPeripheral = ^(CBPeripheral *new){
         weakSelf.results = [NSMutableArray arrayWithArray:[WGBLECentralManager sharedCentralManager].foundPeripherals];
-        [weakSelf.table insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:weakSelf.results.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationBottom];
+        [weakSelf.table reloadData];
     };
     
 }

@@ -21,14 +21,19 @@
         NSLog(@"ERROR: centralManager powered off or not usefull");
         return;
     }
-
     NSLog(@"start 'scan' peripheral,no time out");
-    self->_scanState = kBLEScanState_Scaning;
-    [self.centralManager scanForPeripheralsWithServices:serviceUUIDs options:options];
-
+    if (self->_scanState!=kBLEScanState_Scaning) {
+        
+        self->_scanState = kBLEScanState_Scaning;
+        [self.centralManager scanForPeripheralsWithServices:serviceUUIDs options:options];
+    }
 }
 - (void)stopScan {
-    if (self.scanState==kBLEScanState_Scaning) {
+    if (self.scanState!=kBLEScanState_NotScan) {
+        //蓝牙关闭，清空已记录的BLE
+        [self.connectingPeriperals removeAllObjects];
+        [self.foundPeripherals removeAllObjects];
+
         [self.centralManager stopScan];
         self->_scanState = kBLEScanState_NotScan;
     }else{
