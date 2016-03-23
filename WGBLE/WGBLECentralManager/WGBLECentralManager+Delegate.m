@@ -24,6 +24,12 @@
         self->_centralManagerEnable = YES;
     }else{
         self->_centralManagerEnable = NO;
+        
+        //蓝牙不可用，断开已连接的CBPeripherals
+        for (WGBLEPeripheral *wgPeripheral in self.connectingPeriperals) {
+            [self disConnect:wgPeripheral];
+        }
+
         [self stopScan];
     }
         

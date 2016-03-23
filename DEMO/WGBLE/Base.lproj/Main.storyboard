@@ -20,6 +20,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wPT-fy-26r">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="NIh-eD-l3W">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="86"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-Zg-bgs">
+                                            <rect key="frame" x="513" y="28" width="67" height="30"/>
+                                            <state key="normal" title="StopScan"/>
+                                            <connections>
+                                                <action selector="endScna:" destination="kfO-KD-Ny2" eventType="touchUpInside" id="i8d-bJ-6d0"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-1d-ElU">
+                                            <rect key="frame" x="20" y="28" width="68" height="30"/>
+                                            <state key="normal" title="StartScan"/>
+                                            <connections>
+                                                <action selector="start:" destination="kfO-KD-Ny2" eventType="touchUpInside" id="D8M-co-pvO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="eG8-1d-ElU" firstAttribute="centerY" secondItem="NIh-eD-l3W" secondAttribute="centerY" id="TNG-OI-pfK"/>
+                                        <constraint firstItem="K3q-Zg-bgs" firstAttribute="centerY" secondItem="NIh-eD-l3W" secondAttribute="centerY" id="YWz-Ac-8AQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="K3q-Zg-bgs" secondAttribute="trailing" constant="20" id="qg7-iM-8iO"/>
+                                        <constraint firstItem="eG8-1d-ElU" firstAttribute="leading" secondItem="NIh-eD-l3W" secondAttribute="leading" constant="20" id="vEA-3X-ZvQ"/>
+                                    </constraints>
+                                </view>
                                 <connections>
                                     <outlet property="dataSource" destination="kfO-KD-Ny2" id="7Ln-3P-eEH"/>
                                     <outlet property="delegate" destination="kfO-KD-Ny2" id="rJE-DG-djR"/>

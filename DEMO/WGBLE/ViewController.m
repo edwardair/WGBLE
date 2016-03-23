@@ -33,27 +33,24 @@ UITableViewDataSource,UITableViewDelegate
     typeof(self) __weak weakSelf = self;
 
     [WGBLECentralManager sharedCentralManager].centralManagerOnChangeState = ^(CBCentralManagerState state){
-        if (state==CBCentralManagerStatePoweredOn && [[WGBLECentralManager sharedCentralManager]centralManager]) {
-            if ([WGBLECentralManager sharedCentralManager].scanState==kBLEScanState_NotScan) {
-                [[WGBLECentralManager sharedCentralManager] scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:@"FFF0"]] options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @NO }];
-            }
-        }else{
-            if (([WGBLECentralManager sharedCentralManager].scanState==kBLEScanState_Scaning)) {
-                [[WGBLECentralManager sharedCentralManager] stopScan];
-            }
-            NSLog(@"BLE 连接功能关闭，无法使用BLE");
-        }
-        [weakSelf viewWillAppear:YES];
+
     };
     
     
     [WGBLECentralManager sharedCentralManager].onScanNewPeripheral = ^(CBPeripheral *new){
+        NSLog(@"scan:%@",new);
         weakSelf.results = [NSMutableArray arrayWithArray:[WGBLECentralManager sharedCentralManager].foundPeripherals];
         [weakSelf.table reloadData];
     };
     
 }
 
+- (IBAction)start:(id)sender {
+    [[WGBLECentralManager sharedCentralManager] scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:@"FFF0"]] options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @NO }];
+}
+- (IBAction)endScna:(id)sender {
+    [[WGBLECentralManager sharedCentralManager] stopScan];
+}
 
 #pragma mark - UITableView
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

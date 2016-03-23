@@ -38,15 +38,10 @@
 
 }
 - (void)disConnect:(WGBLEPeripheral *)peripheral{
-//    if (!self.centralManagerEnable) {
-//        WGLogError(@"ERROR: centralManager powered off or not usefull");
-//        return;
-//    }
 
     if (peripheral.connectState==kBLEConnectState_Connected ||
         peripheral.connectState==kBLEConnectState_Connecting) {
         [self.centralManager cancelPeripheralConnection:peripheral.peripheral];
-//        [self.connectingPeriperals removeObject:peripheral];
     }else{
         NSLog(@"warning : disConnect not implement,cause peripheral is not in connecting or connected");
     }

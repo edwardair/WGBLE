@@ -7,7 +7,7 @@
 //
 
 #import "WGBLECentralManager+Scan.h"
-
+#import "WGBLECentralManager+Connect.h"
 
 @implementation WGBLECentralManager (Scan)
 
