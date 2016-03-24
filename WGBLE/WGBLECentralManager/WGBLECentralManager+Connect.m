@@ -45,8 +45,9 @@
         peripheral.connectState == kBLEConnectState_Connecting) {
         [self.centralManager cancelPeripheralConnection:peripheral.peripheral];
     } else {
-        NSLog(@"warning : disConnect not implement,cause peripheral is not in "
-              @"connecting or connected");
+        if (self.onPeripheralDisConnectResult) {
+            self.onPeripheralDisConnectResult(YES, peripheral, nil);
+        }
     }
 }
 
@@ -65,7 +66,7 @@
             self.onPeripheralConnectResult(YES, wgPeripheral, nil);
         }
     } else {
-        NSLog(@"warning:%@已连接，但并未包含在foundPeripherals数组中", peripheral);
+        NSLog(@"warning:%@已连接，但并未包含在foundPeripherals数组中，连接成功，但不会回调，需要程序排查问题", peripheral);
     }
 }
 - (void)centralManager:(CBCentralManager *)central
