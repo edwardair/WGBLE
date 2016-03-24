@@ -25,13 +25,11 @@
     
     //开始搜索时，清空已搜索到的BLE
     [self.foundPeripherals removeAllObjects];
+    [self stopScan];
     
-    if (self->_scanState != kBLEScanState_Scaning) {
-        
-        self->_scanState = kBLEScanState_Scaning;
-        [self.centralManager scanForPeripheralsWithServices:serviceUUIDs
-                                                    options:options];
-    }
+    self->_scanState = kBLEScanState_Scaning;
+    [self.centralManager scanForPeripheralsWithServices:serviceUUIDs
+                                                options:options];
 }
 - (void)stopScan {
     if (self.scanState != kBLEScanState_NotScan) {
