@@ -8,63 +8,60 @@
 
 #import "WGBLECentralManager.h"
 
+#import "WGBLECentralManager+Connect.h"
 #import "WGBLECentralManager+Delegate.h"
 #import "WGBLECentralManager+Scan.h"
-#import "WGBLECentralManager+Connect.h"
-
 
 static dispatch_queue_t staticQueue;
 @implementation WGBLECentralManager
 @synthesize foundPeripherals = _foundPeripherals,
-            connectingPeriperals = _connectingPeriperals;
+connectingPeriperals = _connectingPeriperals;
 
-+ (void)setQueue:(dispatch_queue_t)queue{
++ (void)setQueue:(dispatch_queue_t)queue {
     staticQueue = queue;
 }
-+ (dispatch_queue_t)queue{
++ (dispatch_queue_t)queue {
     return staticQueue;
 }
 
-
-+ (instancetype)sharedCentralManager{
++ (instancetype)sharedCentralManager {
     static dispatch_once_t onceToken;
     static WGBLECentralManager *centralManager;
     dispatch_once(&onceToken, ^{
-        centralManager = [[WGBLECentralManager alloc]initWithQueue:[self queue]];
+        centralManager = [[WGBLECentralManager alloc] initWithQueue:[self queue]];
     });
     return centralManager;
 }
-- (id)initWithQueue:(dispatch_queue_t )queue{
+- (id)initWithQueue:(dispatch_queue_t)queue {
     return [self initWithQueue:queue options:nil];
 }
-- (id )initWithQueue:(dispatch_queue_t)queue options:(NSDictionary *)options{
+- (id)initWithQueue:(dispatch_queue_t)queue options:(NSDictionary *)options {
     self = [super init];
     if (self) {
         _centralManager = [[CBCentralManager alloc] initWithDelegate:self
                                                                queue:queue
                                                              options:options];
-
+        
         [self setupCentralManagerDelegate];
     }
     return self;
 }
 
-
 #pragma mark - getter
 
-- (NSMutableArray *)foundPeripherals{
+- (NSMutableArray *)foundPeripherals {
     if (!_foundPeripherals) {
         _foundPeripherals = @[].mutableCopy;
     }
     return _foundPeripherals;
 }
-- (NSMutableArray *)connectingPeriperals{
+- (NSMutableArray *)connectingPeriperals {
     if (!_connectingPeriperals) {
         _connectingPeriperals = @[].mutableCopy;
     }
     return _connectingPeriperals;
 }
-- (BOOL)centralManagerEnable{
+- (BOOL)centralManagerEnable {
     return _centralManagerEnable;
 }
 
@@ -77,25 +74,30 @@ static dispatch_queue_t staticQueue;
         _centralManagerOnChangeState = centralManagerOnChangeState;
     } else {
         NSLog(@"error:"
-              @"为保证唯一性，多次设置无效，只记录第一次设置，可通过先设置nil，再"
+              @"为"
+              @"保证唯一性，多次设置无效，只记录第一次设置，可通过先设置nil，再"
               @"重设");
     }
 }
 
-
-#pragma mark - 
-- (WGBLEPeripheral *)wgPeripheralFromFoundPeripherals:(CBPeripheral *)peripheral{
-    return [self wgPeripheralFromPeripherals:peripheral inArray:self.foundPeripherals];
-
+#pragma mark -
+- (WGBLEPeripheral *)wgPeripheralFromFoundPeripherals:
+(CBPeripheral *)peripheral {
+    return [self wgPeripheralFromPeripherals:peripheral
+                                     inArray:self.foundPeripherals];
 }
-- (WGBLEPeripheral *)wgPeripheralFromConnectedPeripherals:(CBPeripheral *)peripheral{
-    return [self wgPeripheralFromPeripherals:peripheral inArray:self.connectingPeriperals];
+- (WGBLEPeripheral *)wgPeripheralFromConnectedPeripherals:
+(CBPeripheral *)peripheral {
+    return [self wgPeripheralFromPeripherals:peripheral
+                                     inArray:self.connectingPeriperals];
 }
-- (WGBLEPeripheral *)wgPeripheralFromPeripherals:(CBPeripheral *)peripheral inArray:(NSArray *)container{
+- (WGBLEPeripheral *)wgPeripheralFromPeripherals:(CBPeripheral *)peripheral
+                                         inArray:(NSArray *)container {
     NSString *uuidString = peripheral.identifier.UUIDString;
     WGBLEPeripheral *tmp;
     for (WGBLEPeripheral *wgPeripheral in container) {
-        if (![wgPeripheral.peripheral.identifier.UUIDString isEqualToString:uuidString]) {
+        if (![wgPeripheral.peripheral.identifier.UUIDString
+              isEqualToString:uuidString]) {
             continue;
         }
         
@@ -105,7 +107,5 @@ static dispatch_queue_t staticQueue;
     }
     return tmp;
 }
-
-
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 RayMi. All rights reserved.
 //
 
-#import "WGBLECentralManager+Delegate.h"
 #import "WGBLECentralManager+Connect.h"
+#import "WGBLECentralManager+Delegate.h"
 #import "WGBLECentralManager+Scan.h"
 
 @implementation WGBLECentralManager (Delegate)
 
-- (void)setupCentralManagerDelegate{
+- (void)setupCentralManagerDelegate {
     self.centralManager.delegate = self;
 }
 
@@ -20,19 +20,21 @@
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     NSLog(@"%s", __FUNCTION__);
     
-    if (central.state==CBCentralManagerStatePoweredOn) {
+    if (central.state == CBCentralManagerStatePoweredOn) {
         self->_centralManagerEnable = YES;
-    }else{
+    } else {
         self->_centralManagerEnable = NO;
         
         //蓝牙不可用，断开已连接的CBPeripherals
         for (WGBLEPeripheral *wgPeripheral in self.connectingPeriperals) {
             [self disConnect:wgPeripheral];
         }
-
+        //清空已搜索到的BLE
+        [self.foundPeripherals removeAllObjects];
+        
         [self stopScan];
     }
-        
+    
     if (self.centralManagerOnChangeState) {
         self.centralManagerOnChangeState(central.state);
     }
@@ -41,8 +43,6 @@
 - (void)centralManager:(CBCentralManager *)central
       willRestoreState:(NSDictionary *)dict {
     NSLog(@"%s，功能未集成", __FUNCTION__);
-    
-
 }
 
 - (void)centralManager:(CBCentralManager *)central
@@ -54,29 +54,5 @@ didRetrievePeripherals:(NSArray *)peripherals {
 didRetrieveConnectedPeripherals:(NSArray *)peripherals {
     NSLog(@"%s，功能未集成", __FUNCTION__);
 }
-
-//- (void)centralManager:(CBCentralManager *)central
-// didDiscoverPeripheral:(CBPeripheral *)peripheral
-//     advertisementData:(NSDictionary *)advertisementData
-//                  RSSI:(NSNumber *)RSSI {
-//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
-//}
-//
-//- (void)centralManager:(CBCentralManager *)central
-//  didConnectPeripheral:(CBPeripheral *)peripheral {
-//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
-//}
-//
-//- (void)centralManager:(CBCentralManager *)central
-//didFailToConnectPeripheral:(CBPeripheral *)peripheral
-//                 error:(NSError *)error {
-//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
-//}
-//
-//- (void)centralManager:(CBCentralManager *)central
-//didDisconnectPeripheral:(CBPeripheral *)peripheral
-//                 error:(NSError *)error {
-//    WGLogFormatMsg(@"%s，%@，功能未集成", __FUNCTION__,peripheral);
-//}
 
 @end

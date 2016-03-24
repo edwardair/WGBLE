@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 RayMi. All rights reserved.
 //
 
-#import "WGBLECentralManager+Scan.h"
 #import "WGBLECentralManager+Connect.h"
+#import "WGBLECentralManager+Scan.h"
 
 @implementation WGBLECentralManager (Scan)
 
@@ -22,26 +22,25 @@
         return;
     }
     NSLog(@"start 'scan' peripheral,no time out");
-    if (self->_scanState!=kBLEScanState_Scaning) {
+    
+    //开始搜索时，清空已搜索到的BLE
+    [self.foundPeripherals removeAllObjects];
+    
+    if (self->_scanState != kBLEScanState_Scaning) {
         
         self->_scanState = kBLEScanState_Scaning;
-        [self.centralManager scanForPeripheralsWithServices:serviceUUIDs options:options];
+        [self.centralManager scanForPeripheralsWithServices:serviceUUIDs
+                                                    options:options];
     }
 }
 - (void)stopScan {
-    if (self.scanState!=kBLEScanState_NotScan) {
-        //蓝牙关闭，清空已记录的BLE
-        [self.connectingPeriperals removeAllObjects];
-        [self.foundPeripherals removeAllObjects];
-
+    if (self.scanState != kBLEScanState_NotScan) {
         [self.centralManager stopScan];
         self->_scanState = kBLEScanState_NotScan;
-    }else{
+    } else {
         NSLog(@"repeat 'stopScan' has no effect");
     }
 }
-
-
 
 #pragma mark - CBCentralManagerDelegate
 - (void)centralManager:(CBCentralManager *)central
@@ -50,15 +49,15 @@
                   RSSI:(NSNumber *)RSSI {
     NSLog(@"%s", __FUNCTION__);
     
-    if (![self.foundPeripherals containsObject:[self wgPeripheralFromFoundPeripherals:peripheral]]) {
-        [self.foundPeripherals addObject:[[WGBLEPeripheral alloc]initWithPeripheral:peripheral]];
+    if (![self.foundPeripherals
+          containsObject:[self wgPeripheralFromFoundPeripherals:peripheral]]) {
+        [self.foundPeripherals
+         addObject:[[WGBLEPeripheral alloc] initWithPeripheral:peripheral]];
         
         if (self.onScanNewPeripheral) {
             self.onScanNewPeripheral(peripheral);
         }
     }
-    
-    
 }
 
 @end
