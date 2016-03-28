@@ -18,10 +18,22 @@
     
     if (!self.centralManagerEnable) {
         NSLog(@"ERROR: centralManager powered off or not usefull");
-        return;
+        result(NO, peripheral,
+               [NSError errorWithDomain:@"ConnectError"
+                                   code:-1
+                               userInfo:@{
+                                          @"desc" : @"BLE不可用，无法连接"
+                                          }]);
     }
-    //检测   peripheral为非连接状态，才可连接
-    if (peripheral.connectState != kBLEConnectState_DisConnect) {
+    else if (!peripheral.peripheral) {//检测   peripheral为非连接状态，才可连接
+        result(NO, peripheral,
+               [NSError errorWithDomain:@"ConnectError"
+                                   code:-1
+                               userInfo:@{
+                                          @"desc" : @"peripheral不存在，无法连接"
+                                          }]);
+    }
+    else if (peripheral.connectState != kBLEConnectState_DisConnect) {
         NSLog(@"warning : connect not implement,cause peripheral is in "
               @"connectState = %@",
               @(peripheral.connectState), nil);
