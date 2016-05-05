@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'WGBLEPeripheral' do |ss|
-    s.source_files = 'WGBLE/WGBLEPeripheral/*.{h,m}'
+    ss.source_files = 'WGBLE/WGBLEPeripheral/*.{h,m}'
   end
 end
