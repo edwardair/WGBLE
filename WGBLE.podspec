@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "http://EXAMPLE/WGBLE"
   s.license      = "MIT"
-  s.author = Eduoduo
+  s.author             = { "Eduoduo" => "550621009@qq.com" }
 
   s.platform     = :ios
   s.platform     = :ios, "7.0"
