@@ -13,7 +13,8 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "http://EXAMPLE/WGBLE"
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
+  s.author = Eduoduo
 
   s.platform     = :ios
   s.platform     = :ios, "7.0"
