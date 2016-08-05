@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/edwardair/WGBLE.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/edwardair/WGBLE.git", :tag => s.version }
 
   s.source_files = 'WGBLE/WGBLE.h'
   s.subspec 'WGBLECentralManager' do |ss|
