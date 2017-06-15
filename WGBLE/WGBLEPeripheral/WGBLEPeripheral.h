@@ -59,7 +59,8 @@ typedef void(^DidWriteValueForCharacteristic)(CBCharacteristic *characteristic,N
 @interface WGBLEPeripheral : NSObject
 @property (nonatomic,readonly) kBLEConnectState connectState;
 @property (nonatomic,strong,readonly) CBPeripheral *peripheral;
-
+@property (nonatomic,strong,readonly) NSDictionary *adData;
+@property (nonatomic,strong,readonly) NSNumber *RSSI;
 //回调
 @property (nonatomic,copy) DidDiscoverService onDidDiscoverService;
 @property (nonatomic,copy) DidDiscoverCharacteristic onDidDiscoverCharacteristic;
@@ -80,6 +81,11 @@ typedef void(^DidWriteValueForCharacteristic)(CBCharacteristic *characteristic,N
 
 
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral;
+- (instancetype)initWithPeripheral:(CBPeripheral *)peripheral
+                 advertisementData:(NSDictionary *)adData;
+- (instancetype)initWithPeripheral:(CBPeripheral *)peripheral
+                 advertisementData:(NSDictionary *)adData
+                              RSSI:(NSNumber *)RSSI;
 
 /**
  *  peripheral成功连接后，需要手动调用此方法，查找可用service

@@ -25,11 +25,28 @@ _discoveringCharacteristicUUIDStrings;
 
 #pragma mark -
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral {
+    return [self initWithPeripheral:peripheral
+                  advertisementData:nil
+                               RSSI:nil];
+}
+- (instancetype)initWithPeripheral:(CBPeripheral *)peripheral
+                 advertisementData:(NSDictionary *)adData {
+    return [self initWithPeripheral:peripheral
+                  advertisementData:adData
+                               RSSI:nil];
+}
+
+- (instancetype)initWithPeripheral:(CBPeripheral *)peripheral
+                 advertisementData:(NSDictionary *)adData
+                              RSSI:(NSNumber *)RSSI {
     self = [super init];
     if (self) {
         _peripheral = peripheral;
         _notifyEnableCharacteristics = @[].mutableCopy;
         _notifyUnEnableCharacteristics = @[].mutableCopy;
+        
+        _adData = adData;
+        _RSSI = RSSI;
     }
     return self;
 }
@@ -259,5 +276,6 @@ ForCharacteristicUUIDString:(NSString *)uuidString
     
 #endif
 }
+
 
 @end
