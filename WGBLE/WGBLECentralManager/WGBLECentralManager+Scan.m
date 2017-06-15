@@ -49,8 +49,10 @@
     
     if (![self.foundPeripherals
           containsObject:[self wgPeripheralFromFoundPeripherals:peripheral]]) {
-        [self.foundPeripherals
-         addObject:[[WGBLEPeripheral alloc] initWithPeripheral:peripheral]];
+        WGBLEPeripheral *newPeripheral = [[WGBLEPeripheral alloc] initWithPeripheral:peripheral
+                                                                   advertisementData:advertisementData
+                                                                                RSSI:RSSI];
+        [self.foundPeripherals addObject:newPeripheral];
         
         if (self.onScanNewPeripheral) {
             self.onScanNewPeripheral(peripheral);
