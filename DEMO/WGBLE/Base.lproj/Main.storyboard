@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kfO-KD-Ny2">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kfO-KD-Ny2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,49 +18,52 @@
                         <viewControllerLayoutGuide type="bottom" id="dFS-1t-vTE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vWK-mW-jRZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIh-eD-l3W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-Zg-bgs">
+                                        <rect key="frame" x="288" y="28" width="67" height="30"/>
+                                        <state key="normal" title="StopScan"/>
+                                        <connections>
+                                            <action selector="endScna:" destination="kfO-KD-Ny2" eventType="touchUpInside" id="i8d-bJ-6d0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-1d-ElU">
+                                        <rect key="frame" x="20" y="28" width="68" height="30"/>
+                                        <state key="normal" title="StartScan"/>
+                                        <connections>
+                                            <action selector="start:" destination="kfO-KD-Ny2" eventType="touchUpInside" id="D8M-co-pvO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="eG8-1d-ElU" firstAttribute="centerY" secondItem="NIh-eD-l3W" secondAttribute="centerY" id="TNG-OI-pfK"/>
+                                    <constraint firstAttribute="height" constant="86" id="Y2n-8i-zF1"/>
+                                    <constraint firstItem="K3q-Zg-bgs" firstAttribute="centerY" secondItem="NIh-eD-l3W" secondAttribute="centerY" id="YWz-Ac-8AQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="K3q-Zg-bgs" secondAttribute="trailing" constant="20" id="qg7-iM-8iO"/>
+                                    <constraint firstItem="eG8-1d-ElU" firstAttribute="leading" secondItem="NIh-eD-l3W" secondAttribute="leading" constant="20" id="vEA-3X-ZvQ"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wPT-fy-26r">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="NIh-eD-l3W">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="86"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-Zg-bgs">
-                                            <rect key="frame" x="513" y="28" width="67" height="30"/>
-                                            <state key="normal" title="StopScan"/>
-                                            <connections>
-                                                <action selector="endScna:" destination="kfO-KD-Ny2" eventType="touchUpInside" id="i8d-bJ-6d0"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-1d-ElU">
-                                            <rect key="frame" x="20" y="28" width="68" height="30"/>
-                                            <state key="normal" title="StartScan"/>
-                                            <connections>
-                                                <action selector="start:" destination="kfO-KD-Ny2" eventType="touchUpInside" id="D8M-co-pvO"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="eG8-1d-ElU" firstAttribute="centerY" secondItem="NIh-eD-l3W" secondAttribute="centerY" id="TNG-OI-pfK"/>
-                                        <constraint firstItem="K3q-Zg-bgs" firstAttribute="centerY" secondItem="NIh-eD-l3W" secondAttribute="centerY" id="YWz-Ac-8AQ"/>
-                                        <constraint firstAttribute="trailing" secondItem="K3q-Zg-bgs" secondAttribute="trailing" constant="20" id="qg7-iM-8iO"/>
-                                        <constraint firstItem="eG8-1d-ElU" firstAttribute="leading" secondItem="NIh-eD-l3W" secondAttribute="leading" constant="20" id="vEA-3X-ZvQ"/>
-                                    </constraints>
-                                </view>
+                                <rect key="frame" x="0.0" y="86" width="375" height="581"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="kfO-KD-Ny2" id="7Ln-3P-eEH"/>
                                     <outlet property="delegate" destination="kfO-KD-Ny2" id="rJE-DG-djR"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wPT-fy-26r" firstAttribute="top" secondItem="NIh-eD-l3W" secondAttribute="bottom" id="Bui-wU-uSR"/>
+                            <constraint firstItem="NIh-eD-l3W" firstAttribute="top" secondItem="vWK-mW-jRZ" secondAttribute="top" id="KhL-kh-Deq"/>
+                            <constraint firstItem="NIh-eD-l3W" firstAttribute="leading" secondItem="vWK-mW-jRZ" secondAttribute="leading" id="Ue2-TD-orp"/>
                             <constraint firstAttribute="trailing" secondItem="wPT-fy-26r" secondAttribute="trailing" id="VQh-Tz-1aW"/>
-                            <constraint firstItem="wPT-fy-26r" firstAttribute="top" secondItem="vWK-mW-jRZ" secondAttribute="top" id="iwF-c0-s2z"/>
+                            <constraint firstAttribute="trailing" secondItem="NIh-eD-l3W" secondAttribute="trailing" id="Wzf-26-foQ"/>
                             <constraint firstItem="dFS-1t-vTE" firstAttribute="top" secondItem="wPT-fy-26r" secondAttribute="bottom" id="n1K-jq-b56"/>
                             <constraint firstItem="wPT-fy-26r" firstAttribute="leading" secondItem="vWK-mW-jRZ" secondAttribute="leading" id="yOU-MW-ZBt"/>
                         </constraints>
@@ -67,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6Q-P3-ART" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="-337"/>
+            <point key="canvasLocation" x="565.60000000000002" y="-337.78110944527737"/>
         </scene>
     </scenes>
 </document>

@@ -7,38 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F720C1401EB2CB3D00218DCF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F720C13F1EB2CB3D00218DCF /* NotificationCenter.framework */; };
+		F720C1441EB2CB3D00218DCF /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F720C1431EB2CB3D00218DCF /* TodayViewController.m */; };
+		F720C1471EB2CB3D00218DCF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F720C1451EB2CB3D00218DCF /* MainInterface.storyboard */; };
+		F720C14B1EB2CB3D00218DCF /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F720C13D1EB2CB3D00218DCF /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F720C1501EB2CDC400218DCF /* WGBLECentralManager+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F11B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m */; };
+		F720C1511EB2CDC400218DCF /* WGBLECentralManager+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F31B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m */; };
+		F720C1521EB2CDC400218DCF /* WGBLECentralManager+Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F51B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m */; };
+		F720C1531EB2CDC400218DCF /* WGBLECentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F71B1D6F5A00B84A4E /* WGBLECentralManager.m */; };
+		F720C1541EB2CDC400218DCF /* WGBLEPeripheral+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FA1B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m */; };
+		F720C1551EB2CDC400218DCF /* WGBLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FC1B1D6F5A00B84A4E /* WGBLEPeripheral.m */; };
 		F7A4F9C71B1D6EEA00B84A4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9C61B1D6EEA00B84A4E /* main.m */; };
 		F7A4F9CA1B1D6EEA00B84A4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9C91B1D6EEA00B84A4E /* AppDelegate.m */; };
 		F7A4F9D31B1D6EEA00B84A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A4F9D11B1D6EEA00B84A4E /* Main.storyboard */; };
 		F7A4F9D51B1D6EEA00B84A4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A4F9D41B1D6EEA00B84A4E /* Images.xcassets */; };
 		F7A4F9D81B1D6EEA00B84A4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A4F9D61B1D6EEA00B84A4E /* LaunchScreen.xib */; };
-		F7A4F9E41B1D6EEA00B84A4E /* WGBLETests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9E31B1D6EEA00B84A4E /* WGBLETests.m */; };
 		F7A4F9FD1B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F11B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m */; };
-		F7A4F9FE1B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F11B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m */; };
 		F7A4F9FF1B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F31B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m */; };
-		F7A4FA001B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F31B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m */; };
 		F7A4FA011B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F51B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m */; };
-		F7A4FA021B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F51B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m */; };
 		F7A4FA031B1D6F5A00B84A4E /* WGBLECentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F71B1D6F5A00B84A4E /* WGBLECentralManager.m */; };
-		F7A4FA041B1D6F5A00B84A4E /* WGBLECentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9F71B1D6F5A00B84A4E /* WGBLECentralManager.m */; };
 		F7A4FA051B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FA1B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m */; };
-		F7A4FA061B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FA1B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m */; };
 		F7A4FA071B1D6F5A00B84A4E /* WGBLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FC1B1D6F5A00B84A4E /* WGBLEPeripheral.m */; };
-		F7A4FA081B1D6F5A00B84A4E /* WGBLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4F9FC1B1D6F5A00B84A4E /* WGBLEPeripheral.m */; };
 		F7A4FA0B1B1D705D00B84A4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A4FA0A1B1D705D00B84A4E /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F7A4F9DE1B1D6EEA00B84A4E /* PBXContainerItemProxy */ = {
+		F720C1491EB2CB3D00218DCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F7A4F9B91B1D6EEA00B84A4E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F7A4F9C01B1D6EEA00B84A4E;
-			remoteInfo = WGBLE;
+			remoteGlobalIDString = F720C13C1EB2CB3D00218DCF;
+			remoteInfo = Widget;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F720C14F1EB2CB3D00218DCF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F720C14B1EB2CB3D00218DCF /* Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F720C13D1EB2CB3D00218DCF /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F720C13F1EB2CB3D00218DCF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		F720C1421EB2CB3D00218DCF /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		F720C1431EB2CB3D00218DCF /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		F720C1461EB2CB3D00218DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F720C1481EB2CB3D00218DCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A4F9C11B1D6EEA00B84A4E /* WGBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A4F9C51B1D6EEA00B84A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A4F9C61B1D6EEA00B84A4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,7 +70,6 @@
 		F7A4F9D21B1D6EEA00B84A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7A4F9D41B1D6EEA00B84A4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F7A4F9D71B1D6EEA00B84A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F7A4F9DD1B1D6EEA00B84A4E /* WGBLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WGBLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A4F9E21B1D6EEA00B84A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A4F9E31B1D6EEA00B84A4E /* WGBLETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGBLETests.m; sourceTree = "<group>"; };
 		F7A4F9EE1B1D6F5A00B84A4E /* WGBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGBLE.h; sourceTree = "<group>"; };
@@ -68,14 +90,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F7A4F9BE1B1D6EEA00B84A4E /* Frameworks */ = {
+		F720C13A1EB2CB3D00218DCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F720C1401EB2CB3D00218DCF /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7A4F9DA1B1D6EEA00B84A4E /* Frameworks */ = {
+		F7A4F9BE1B1D6EEA00B84A4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,12 +108,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F720C13E1EB2CB3D00218DCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F720C13F1EB2CB3D00218DCF /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F720C1411EB2CB3D00218DCF /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				F720C1421EB2CB3D00218DCF /* TodayViewController.h */,
+				F720C1431EB2CB3D00218DCF /* TodayViewController.m */,
+				F720C1451EB2CB3D00218DCF /* MainInterface.storyboard */,
+				F720C1481EB2CB3D00218DCF /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		F7A4F9B81B1D6EEA00B84A4E = {
 			isa = PBXGroup;
 			children = (
 				F7A4F9ED1B1D6F5A00B84A4E /* WGBLE */,
 				F7A4F9C31B1D6EEA00B84A4E /* DEMO */,
 				F7A4F9E01B1D6EEA00B84A4E /* WGBLETests */,
+				F720C1411EB2CB3D00218DCF /* Widget */,
+				F720C13E1EB2CB3D00218DCF /* Frameworks */,
 				F7A4F9C21B1D6EEA00B84A4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				F7A4F9C11B1D6EEA00B84A4E /* WGBLE.app */,
-				F7A4F9DD1B1D6EEA00B84A4E /* WGBLETests.xctest */,
+				F720C13D1EB2CB3D00218DCF /* Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +230,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F720C13C1EB2CB3D00218DCF /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F720C14C1EB2CB3D00218DCF /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				F720C1391EB2CB3D00218DCF /* Sources */,
+				F720C13A1EB2CB3D00218DCF /* Frameworks */,
+				F720C13B1EB2CB3D00218DCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = F720C13D1EB2CB3D00218DCF /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F7A4F9C01B1D6EEA00B84A4E /* WGBLE */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7A4F9E71B1D6EEA00B84A4E /* Build configuration list for PBXNativeTarget "WGBLE" */;
@@ -193,33 +254,17 @@
 				F7A4F9BD1B1D6EEA00B84A4E /* Sources */,
 				F7A4F9BE1B1D6EEA00B84A4E /* Frameworks */,
 				F7A4F9BF1B1D6EEA00B84A4E /* Resources */,
+				F720C14F1EB2CB3D00218DCF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F720C14A1EB2CB3D00218DCF /* PBXTargetDependency */,
 			);
 			name = WGBLE;
 			productName = WGBLE;
 			productReference = F7A4F9C11B1D6EEA00B84A4E /* WGBLE.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F7A4F9DC1B1D6EEA00B84A4E /* WGBLETests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7A4F9EA1B1D6EEA00B84A4E /* Build configuration list for PBXNativeTarget "WGBLETests" */;
-			buildPhases = (
-				F7A4F9D91B1D6EEA00B84A4E /* Sources */,
-				F7A4F9DA1B1D6EEA00B84A4E /* Frameworks */,
-				F7A4F9DB1B1D6EEA00B84A4E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7A4F9DF1B1D6EEA00B84A4E /* PBXTargetDependency */,
-			);
-			name = WGBLETests;
-			productName = WGBLETests;
-			productReference = F7A4F9DD1B1D6EEA00B84A4E /* WGBLETests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -227,20 +272,23 @@
 		F7A4F9B91B1D6EEA00B84A4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = WG;
 				TargetAttributes = {
+					F720C13C1EB2CB3D00218DCF = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 9K9256C42S;
+						ProvisioningStyle = Automatic;
+					};
 					F7A4F9C01B1D6EEA00B84A4E = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9K9256C42S;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
-					};
-					F7A4F9DC1B1D6EEA00B84A4E = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = F7A4F9C01B1D6EEA00B84A4E;
 					};
 				};
 			};
@@ -258,12 +306,20 @@
 			projectRoot = "";
 			targets = (
 				F7A4F9C01B1D6EEA00B84A4E /* WGBLE */,
-				F7A4F9DC1B1D6EEA00B84A4E /* WGBLETests */,
+				F720C13C1EB2CB3D00218DCF /* Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F720C13B1EB2CB3D00218DCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F720C1471EB2CB3D00218DCF /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7A4F9BF1B1D6EEA00B84A4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,16 +330,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7A4F9DB1B1D6EEA00B84A4E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F720C1391EB2CB3D00218DCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F720C1501EB2CDC400218DCF /* WGBLECentralManager+Connect.m in Sources */,
+				F720C1511EB2CDC400218DCF /* WGBLECentralManager+Delegate.m in Sources */,
+				F720C1521EB2CDC400218DCF /* WGBLECentralManager+Scan.m in Sources */,
+				F720C1531EB2CDC400218DCF /* WGBLECentralManager.m in Sources */,
+				F720C1541EB2CDC400218DCF /* WGBLEPeripheral+Discover.m in Sources */,
+				F720C1551EB2CDC400218DCF /* WGBLEPeripheral.m in Sources */,
+				F720C1441EB2CB3D00218DCF /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7A4F9BD1B1D6EEA00B84A4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,31 +363,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7A4F9D91B1D6EEA00B84A4E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7A4FA001B1D6F5A00B84A4E /* WGBLECentralManager+Delegate.m in Sources */,
-				F7A4FA081B1D6F5A00B84A4E /* WGBLEPeripheral.m in Sources */,
-				F7A4FA041B1D6F5A00B84A4E /* WGBLECentralManager.m in Sources */,
-				F7A4F9FE1B1D6F5A00B84A4E /* WGBLECentralManager+Connect.m in Sources */,
-				F7A4FA021B1D6F5A00B84A4E /* WGBLECentralManager+Scan.m in Sources */,
-				F7A4FA061B1D6F5A00B84A4E /* WGBLEPeripheral+Discover.m in Sources */,
-				F7A4F9E41B1D6EEA00B84A4E /* WGBLETests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F7A4F9DF1B1D6EEA00B84A4E /* PBXTargetDependency */ = {
+		F720C14A1EB2CB3D00218DCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F7A4F9C01B1D6EEA00B84A4E /* WGBLE */;
-			targetProxy = F7A4F9DE1B1D6EEA00B84A4E /* PBXContainerItemProxy */;
+			target = F720C13C1EB2CB3D00218DCF /* Widget */;
+			targetProxy = F720C1491EB2CB3D00218DCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F720C1451EB2CB3D00218DCF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F720C1461EB2CB3D00218DCF /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		F7A4F9D11B1D6EEA00B84A4E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -344,6 +401,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F720C14D1EB2CB3D00218DCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZhiQiang Wang (CEPR2M9BG9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9K9256C42S;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduoduo.WGBLE.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F720C14E1EB2CB3D00218DCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZhiQiang Wang (CEPR2M9BG9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9K9256C42S;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduoduo.WGBLE.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F7A4F9E51B1D6EEA00B84A4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -357,8 +451,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -381,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,8 +498,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -419,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -432,13 +530,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: ZhiQiang Wang (CEPR2M9BG9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9K9256C42S;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WGBLE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eduoduo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a4a7ffb-a474-40af-aa19-222c92df8f70";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -447,55 +548,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: ZhiQiang Wang (CEPR2M9BG9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9K9256C42S;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WGBLE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eduoduo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a4a7ffb-a474-40af-aa19-222c92df8f70";
-			};
-			name = Release;
-		};
-		F7A4F9EB1B1D6EEA00B84A4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WGBLETests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eduoduo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WGBLE.app/WGBLE";
-			};
-			name = Debug;
-		};
-		F7A4F9EC1B1D6EEA00B84A4E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WGBLETests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eduoduo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WGBLE.app/WGBLE";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F720C14C1EB2CB3D00218DCF /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F720C14D1EB2CB3D00218DCF /* Debug */,
+				F720C14E1EB2CB3D00218DCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F7A4F9BC1B1D6EEA00B84A4E /* Build configuration list for PBXProject "WGBLE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -510,15 +586,6 @@
 			buildConfigurations = (
 				F7A4F9E81B1D6EEA00B84A4E /* Debug */,
 				F7A4F9E91B1D6EEA00B84A4E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7A4F9EA1B1D6EEA00B84A4E /* Build configuration list for PBXNativeTarget "WGBLETests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7A4F9EB1B1D6EEA00B84A4E /* Debug */,
-				F7A4F9EC1B1D6EEA00B84A4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
